@@ -1,0 +1,8 @@
+Task.sum(:priority)
+Task.sum(:priority, :conditions => 'complete=0')
+Task.maximum(:priority)
+Task.minimum(:priority)
+Task.average(:priority)
+p = Project.find(:first)
+p.tasks.sum(:priority)
+p.tasks.sum(:priority, :conditions => 'complete=0')
